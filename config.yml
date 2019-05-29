@@ -1,3 +1,4 @@
+---
 - name: web app setup
   hosts: win
   ansible_connection: winrm
