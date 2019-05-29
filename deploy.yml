@@ -78,7 +78,7 @@
 - name: web app setup
   hosts: win
   ansible_connection: winrm
-  ansible_ssh_port:5986
+  ansible_ssh_port: 5986
   gather_facts: no
   vars_files: [ "secret.yml" ]
   tasks:
