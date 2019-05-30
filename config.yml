@@ -25,12 +25,12 @@
 
   - name: ensure that application responds properly
     uri:
-      url: http://{{ ansible_ssh_host}}/foo
+      url: http://{{ inventory_hostname }}/foo
       return_content: yes
     register: uri_out
     delegate_to: localhost
-    until: uri_out.content | search("Hello from")
+    until: 'Hello from' in uri_out.content
     retries: 3
 
   - debug:
-      msg: "web application is available at http://{{ ansible_ssh_host}}/foo"
+      msg: "web application is available at http://{{ inventory_hostname }}/foo"
