@@ -29,7 +29,7 @@
       return_content: yes
     register: uri_out
     delegate_to: localhost
-    until: 'Hello from' in uri_out.content
+    until: "'Hello from' in uri_out.content"
     retries: 3
 
   - debug:
