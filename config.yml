@@ -1,6 +1,6 @@
 ---
 - name: web app setup
-  hosts: win
+  hosts: tag_Name_stock_win_ami_test
   gather_facts: no
   tasks:
   - name: ensure IIS and ASP.NET are installed
